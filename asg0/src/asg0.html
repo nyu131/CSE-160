@@ -1,0 +1,65 @@
+<!--
+Student Name: Nicholas Yu
+UCSC Email: nyu13@ucsc.edu
+
+Notes to Grader:
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>asg0</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="cnv1" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+    <br><br>
+
+    <label>v1: x</label>
+    <input type="text" id="xCoord" value="" size="10">
+
+    <label>y</label>
+    <input type="text" id="yCoord" value="" size="10">
+
+    <br>
+
+    <label>v2: x</label>
+    <input type="text" id="xCoord2" value="" size="10">
+
+    <label>y</label>
+    <input type="text" id="yCoord2" value="" size="10">
+
+    <br>
+
+    <input type="button" value="Draw" onclick="handleDrawEvent()">
+
+    <br><br>
+
+    <label>Operation:</label>
+    <select id="operation">
+      <option value=""></option>
+      <option value="add">Add</option>
+      <option value="sub">Subtract</option>
+      <option value="mul">Muliply</option>
+      <option value="div">Divide</option>
+      <option value="angle">Angle between</option>
+      <option value="area">Area</option>
+      <option value="mag">Magnitude</option>
+      <option value="norm">Normalize</option>
+    </select>
+
+    <label>Scalar:</label>
+    <input type="text" id="scalar" value="" size="10">
+
+    <br>
+    <input type="button" value="Draw" onclick="handleDrawOperationEvent()">
+
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="asg0.js"></script>
+  </body>
+</html>
