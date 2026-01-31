@@ -1,0 +1,91 @@
+<!--
+Student Name: Nicholas Yu
+UCSC Email: nyu13@ucsc.edu
+
+Notes to Grader: 
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Blocky Bat</title>
+
+  <style>
+    body {
+      background: radial-gradient(circle at top, #1a1a2e, #050510);
+      color: #e6e6ff;
+      font-family: system-ui, sans-serif;
+      text-align: center;
+    }
+
+    canvas {
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(120, 120, 255, 0.25);
+      margin-top: 12px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+
+<body onload="main()">
+  <h2>Blocky Animal</h2>
+
+  <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+  </canvas>
+
+  <p style="color:white; font-family:Arial; margin-top:8px;">
+  Controls: Drag to rotate | Shift + Click for a special animation!
+  </p>
+
+
+  <p id="numdot">XXX</p>
+
+  <p>
+  <button type="button" id="pauseBtn">Pause (P)</button>
+  </p>
+
+
+  <p>
+    Wing Elbow
+    <input type="range" min="-45" max="45" value="0" class="slider" id="wingElbowSlide">
+    Animation:
+    <button type="button" id="animationElbowOnButton">ON</button>
+    <button type="button" id="animationElbowOffButton">OFF</button>
+  </p>
+
+  <p>
+    Wing Shoulder
+    <input type="range" min="-45" max="45" value="0" class="slider" id="wingShoulderSlide">
+    Animation:
+    <button type="button" id="animationShoulderOnButton">ON</button>
+    <button type="button" id="animationShoulderOffButton">OFF</button>
+  </p>
+
+  <p>
+    Camera Angle
+    <input type="range" min="0" max="90" value="0" class="slider" id="angleSlide">
+  </p>
+
+  <!-- WebGL Libraries -->
+  <script src="../lib/webgl-utils.js"></script>
+  <script src="../lib/webgl-debug.js"></script>
+  <script src="../lib/cuon-utils.js"></script>
+  <script src="../lib/cuon-matrix-cse160.js"></script>
+
+  <!-- Shape Classes -->
+  <script src="Point.js"></script>
+  <script src="Triangle.js"></script>
+  <script src="Circle.js"></script>
+  <script src="Cube.js"></script>
+
+  <!-- Main Program -->
+  <script src="BlockyAnimal.js"></script>
+</body>
+</html>
